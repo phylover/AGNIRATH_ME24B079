@@ -21,7 +21,7 @@ def calculate_steady_state_temp(T_a, tau):
         # winding temp after this iteration 
         a = 0.455 * (P_c + P_e) + T_a
         
-        # Check convergence
+        # Break from the loop if difference is less than 1k
         if abs(a- T_w) < 1:
             return round(a, 1)
         
